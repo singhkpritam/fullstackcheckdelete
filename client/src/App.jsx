@@ -9,7 +9,7 @@ function App() {
       const res = await axios.get("http://backend:5000/api")
       setData(res.data.message);
     } catch (error) {
-      setData("❌ Backend connect nahi hua");
+      setData("❌ Backend connect nahi hua hmmmm....");
     }
   };
 
