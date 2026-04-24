@@ -6,7 +6,7 @@ function App() {
 
   const getData = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api");
+      const res = await axios.get("http://backend:5000/api")
       setData(res.data.message);
     } catch (error) {
       setData("❌ Backend connect nahi hua");
