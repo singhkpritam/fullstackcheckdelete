@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function App() {
-  const [data, setData] = useState("Loading...");
+function App() {  const [data, setData] = useState("Loading...");
 
   const getData = async () => {
     try {
-      const res = await axios.get("http://backend:5000/api")
+      const res = await axios.get("/api")
       setData(res.data.message);
     } catch (error) {
-      setData("❌ Backend connect nahi hua hmmmm....");
+      setData("❌ Backend connect nahi hua karo jaldi hmmmm....");
     }
   };
 
@@ -29,3 +28,4 @@ function App() {
 }
 
 export default App;
+
