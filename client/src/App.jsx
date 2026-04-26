@@ -5,7 +5,7 @@ function App() {  const [data, setData] = useState("Loading...");
 
   const getData = async () => {
     try {
-      const res = await axios.get("/api")
+      const res = await axios.get("http://192.168.49.2:30007/api");
       setData(res.data.message);
     } catch (error) {
       setData("❌ Backend connect nahi hua karo jaldi hmmmm....");
